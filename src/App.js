@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
 import './App.css';
+import Table from './Component/Dashboard/Table.js';
 
 function App() {
+  const data = [
+    { Name: 'John', Age: 28, City: 'New York' },
+    { Name: 'Anna', Age: 22, City: 'London' },
+    { Name: 'Mike', Age: 32, City: 'San Francisco' },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table data={data} />
     </div>
   );
 }
